@@ -1,0 +1,19 @@
+.header{
+  background-color: dodgerblue;
+  padding: 8px;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+}
+
+li{
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #ece4e4;
+}

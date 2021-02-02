@@ -1,0 +1,25 @@
+<div [className]="'form-wrapper'">
+  <form [formGroup]="mainForm">
+
+    <div [className]="'input-wrap'">
+      <label>Login:
+        <input [formControl]="login">
+      </label>
+    </div>
+
+    <div [className]="'input-wrap'">
+      <label>Password:
+        <input [formControl]="password" type="password">
+      </label>
+    </div>
+
+    <div [className]="'btn-wrap'">
+      <button (click)="tryLogin()" [className]="'button-login'">Login</button>
+      <button (click)="Register()" [className]="'button-login'">Register</button>
+    </div>
+
+    <div *ngIf="loginInvalid" [className]="'wrong-pass'">
+      Неправильний логін або пароль...
+    </div>
+  </form>
+</div>

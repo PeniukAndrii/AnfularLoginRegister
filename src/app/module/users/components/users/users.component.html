@@ -1,0 +1,4 @@
+<div *ngIf="loginUser" [className]="'login-user'">Logged- {{loginUser[0].login}}</div>
+<div *ngIf="loginUser">
+  <app-user *ngFor="let user of users" [user]="user"></app-user>
+</div>

@@ -1,0 +1,19 @@
+<div [className]="'form-wrapper'">
+  <form [formGroup]="regForm">
+    <div [className]="'input-wrap'">
+      <label>Login:
+        <input [formControl]="login">
+      </label>
+    </div>
+    <div [className]="'input-wrap'">
+      <label>Password:
+        <input [formControl]="password">
+      </label>
+    </div>
+    <div *ngIf="regForm.controls.login.value.length<2 && regForm.controls.login.value.length>0" [className]="'wrong-pass'">
+      Логін: Мінамально 2 символа</div>
+    <div *ngIf="regForm.controls.password.value.length<3 && regForm.controls.password.value.length>0" [className]="'wrong-pass'">
+      Пароль: Мінамально 3 символів</div>
+    <button (click)="tryLogin()" [className]="'button-login'">Register</button>
+  </form>
+</div>
